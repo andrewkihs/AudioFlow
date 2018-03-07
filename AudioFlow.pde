@@ -92,7 +92,7 @@ void draw() {
         PVector pointFlow = opencv.getFlowAt(x, y);
         float a = pointFlow.mag();                          // length of line
         if (a>=10){                                         // reject small flow
-          // color of lines is based on point flow
+          // color of lines based on Hideshi Shimodaira flow 
           float rf=0.5*(1.0+pointFlow.x/(a+0.1));
           float gf=0.5*(1.0+pointFlow.y/(a+0.1));
           float bf=0.5*(2.0-(rf+gf));
